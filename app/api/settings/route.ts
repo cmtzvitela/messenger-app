@@ -5,7 +5,6 @@ import prisma from '@/app/libs/prismadb';
 export async function POST(request: Request) {
   try {
     const currentUser = await getCurrentUser();
-    console.log('🚀 ~ currentUser:', currentUser);
     const body = await request.json();
     const { name, image } = body;
 
